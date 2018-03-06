@@ -9,7 +9,9 @@ class ThemeSwitch extends Component {
     }
 
     handleSwitchColor(color) {
+        console.log(color,'color')
         if (this.props.onSwitchColor) {
+            alert(2)
             this.props.onSwitchColor(color)
         }
     }
@@ -29,6 +31,7 @@ class ThemeSwitch extends Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state);
     return {
         themeColor: state.themeColor
     }
