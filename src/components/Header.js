@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 export default class Header extends Component{
     static propTypes = {
-        themeColor: PropTypes.string
+        themeColor: PropTypes.string,
+        themeFontSize: PropTypes.string
     }
     render(){
         return (

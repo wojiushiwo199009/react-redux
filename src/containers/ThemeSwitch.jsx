@@ -2,15 +2,17 @@ import {connect} from 'react-redux'
 import ThemeSwitch from '../components/ThemeSwitch'
  
 const mapStateToProps=(state)=>{
+    console.log(state,'state')
     return {
-        themeColor:state.themeColor
+        themeColor:state.themeColor,
+        themeFontSize:state.themeFontSize
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSwitchColor:(color)=>{
-            dispatch({ type: 'CHANGE_COLOR', themeColor: color})
+        onSwitchColor: (color, fontSize)=>{
+            dispatch({ type: 'CHANGE_COLOR', themeColor: color,themeFontSize:fontSize})
         }
     }
 }

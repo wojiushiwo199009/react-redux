@@ -6,12 +6,13 @@ import{connect} from 'react-redux'
 
 class Content extends Component{
     static propTypes={
-        themeColor: PropTypes.string
+        themeColor: PropTypes.string,
+        themeFontSize:PropTypes.string
     }
     render(){
         return(
             <div>
-                <p style={{color:this.props.themeColor}}>React.js小书内容</p>
+                <p style={{color:this.props.themeColor,fontSize:this.props.themeFontSize}}>React.js小书内容</p>
                 <ContentDetails />
                 <ThemeSwitch />
             </div>
@@ -20,7 +21,8 @@ class Content extends Component{
 }
 const mapStateToProps = (state) =>{
     return {
-        themeColor:state.themeColor
+        themeColor:state.themeColor,
+        themeFontSize:state.themeFontSize
     }
 }
 export default connect(mapStateToProps)(Content)

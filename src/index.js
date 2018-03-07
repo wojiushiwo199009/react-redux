@@ -4,11 +4,11 @@ import './index.css';
 import { Provider } from 'react-redux'
 import App from './App';
 import { createStore } from 'redux'
-import registerServiceWorker from './registerServiceWorker';
-
+//暂存state
 const themeReducer = (state, action) => {
     if (!state) return {
-        themeColor: 'red'
+        themeColor: 'red',
+        themeFontSize:'24px'
     }
     switch (action.type) {
         case 'CHANGE_COLOR':
@@ -21,4 +21,3 @@ const themeReducer = (state, action) => {
 const store = createStore(themeReducer)
 
 ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'));
-registerServiceWorker();
