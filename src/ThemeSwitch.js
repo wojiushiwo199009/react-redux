@@ -9,9 +9,7 @@ class ThemeSwitch extends Component {
     }
 
     handleSwitchColor(color) {
-        console.log(color,'color')
         if (this.props.onSwitchColor) {
-            alert(2)
             this.props.onSwitchColor(color)
         }
     }
@@ -24,7 +22,7 @@ class ThemeSwitch extends Component {
                     onClick={this.handleSwitchColor.bind(this, 'red')}>Red</button>
                 <button
                     style={{ color: this.props.themeColor }}
-                    onClick={this.handleSwitchColor.bind(this, 'blue')}>Blue</button>
+                    onClick={this.handleSwitchColor.bind(this, 'green')}>green</button>
             </div>
         )
     }
