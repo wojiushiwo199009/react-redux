@@ -12,7 +12,7 @@ class Content extends Component {
     render(){
         return(
             <div>
-                <p style={{color:this.props.themeColor}}>React.js小书内容</p>
+                <p style={{color:this.props.themeColor}}>123React.js小书内容</p>
                 <ContentDetail />
                 <ThemeSwitch />
             </div>
